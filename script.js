@@ -4,6 +4,7 @@ const getNewTwisterBtn = document.querySelector(".new-twister-btn");
 
 const tongueTwisterText = document.querySelector(".tongue-twister");
 const speechOutput = document.querySelector(".speech-output");
+const score = document.querySelector(".score");
 
 //Event listner
 startRecordingBtn.addEventListener("click", () => {
@@ -40,7 +41,13 @@ recognition.onresult = function (event) {
   const current = event.resultIndex;
   const transcript = event.results[current][0].transcript;
   speechOutput.textContent = transcript;
-  checkResult();
+  let twisterText = tongueTwisterText.textContent.toLowerCase();
+  const speechText = speechOutput.textContent.toLowerCase();
+  if (twisterText == speechText) {
+    score.innerText = "YEYYY you did it correct!!";
+  } else {
+    score.innerText = "Nooo! You failed!";
+  }
 };
 
 //Get random Array
@@ -49,16 +56,5 @@ function getTongueTwister() {
     tongueTwisterArray[Math.floor(Math.random() * tongueTwisterArray.length)];
   tongueTwisterText.textContent = randomTwister;
   speechOutput.textContent = "";
-}
-
-let twisterText = tongueTwisterText.toLowerCase();
-const speechText = speechOutput.toLowerCase();
-
-function checkResult() {
-  console.log(twisterText);
-  if (twisterText == speechText) {
-    alert("Yeeey! You did it");
-  } else {
-    alert("Nooo! You failed!");
-  }
+  score.innerText = "";
 }
