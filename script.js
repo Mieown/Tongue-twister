@@ -1,6 +1,6 @@
 //Get information from HTML
 const startRecordingBtn = document.querySelector(".record-btn");
-const getNewTwisterBtn = document.querySelector(".new-twister-btn");
+const getNewTwisterBtn = document.querySelector(".get-twister-btn");
 
 const tongueTwisterText = document.querySelector(".tongue-twister");
 const speechOutput = document.querySelector(".speech-output");

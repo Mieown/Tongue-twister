@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --yellow: #E8D06E;
+    --red: #BF4832;
+    --font: 'Roboto', sans-serif;
+}
