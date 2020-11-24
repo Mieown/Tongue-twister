@@ -1,11 +1,46 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --yellow: #E8D06E;
-    --red: #BF4832;
-    --font: 'Roboto', sans-serif;
+  --yellow: #e8d06e;
+  --red: #bf4832;
+  --font: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--yellow);
+  font-family: var(--font);
+}
+
+#startpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.logotype img {
+  width: 20rem;
+}
+
+.mouth {
+  width: 15rem;
+}
+
+.heart {
+  width: 1.8rem;
+}
+
+.game-description {
+  padding: 1.5rem;
+  font-size: 1.2rem;
 }
