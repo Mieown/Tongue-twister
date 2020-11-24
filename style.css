@@ -20,20 +20,25 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  height: 94vh;
 }
 
 footer {
   display: flex;
   justify-content: center;
   text-align: center;
+  height: 6vh;
+  background-color: white;
 }
 
 .logotype img {
-  width: 20rem;
+  width: 22rem;
+  margin-top: 1.2rem;
 }
 
 .mouth {
-  width: 15rem;
+  width: 12rem;
+  margin-bottom: 1.2rem;
 }
 
 .heart {
@@ -41,6 +46,6 @@ footer {
 }
 
 .game-description {
-  padding: 1.5rem;
-  font-size: 1.2rem;
+  padding: 1.8rem;
+  font-size: 0.8rem;
 }
