@@ -36,10 +36,12 @@ footer {
   justify-content: center;
   text-align: center;
   height: 94vh;
+  padding: 1.8rem;
+
 }
 
 .logotype img {
-  width: 22rem;
+  width: 100%;
   margin-top: 1.2rem;
 }
 
@@ -56,7 +58,7 @@ footer {
 }
 
 .game-description {
-  padding: 1.8rem;
+  padding: 1.8rem 0rem;
   font-size: 0.65rem;
   /* text-align: justify; */
   line-height: 1.4rem;
@@ -66,4 +68,8 @@ footer {
 .logotype-small {
   width: 15rem;
   margin-top: 1.2rem;
+}
+
+.container-bubble-one img, .container-bubble-two img {
+  width: 80vw;
 }
