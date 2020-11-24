@@ -29,6 +29,7 @@ footer {
   text-align: center;
   height: 6vh;
   background-color: white;
+  padding: 10px;
 }
 
 .logotype img {
@@ -43,9 +44,18 @@ footer {
 
 .heart {
   width: 1.8rem;
+  margin-top: -2px;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
 
 .game-description {
   padding: 1.8rem;
-  font-size: 0.8rem;
+  font-size: 0.65rem;
+  /* text-align: justify; */
+  line-height: 1.4rem;
+}
+
+a {
+  text-decoration: none;
 }
