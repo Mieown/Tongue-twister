@@ -23,9 +23,17 @@ footer {
   display: flex;
   justify-content: center;
   text-align: center;
-  height: 6vh;
+  height: 5vh;
   background-color: white;
-  padding: 10px;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.heart {
+  width: 1.8rem;
+  margin-top: -3px;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
 
 /*Startpage*/
@@ -35,41 +43,41 @@ footer {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 94vh;
+  height: 95vh;
   padding: 1.8rem;
-
 }
 
 .logotype img {
   width: 100%;
-  margin-top: 1.2rem;
 }
 
 .mouth {
   width: 12rem;
-  margin-bottom: 1.2rem;
-}
-
-.heart {
-  width: 1.8rem;
-  margin-top: -2px;
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
 }
 
 .game-description {
-  padding: 1.8rem 0rem;
+  padding: 1.6rem 0rem;
   font-size: 0.65rem;
   /* text-align: justify; */
   line-height: 1.4rem;
 }
 
 /* Page 2 - Gamepage*/
-.logotype-small {
-  width: 15rem;
-  margin-top: 1.2rem;
+.game-page {
+  padding: 1.3rem;
 }
 
-.container-bubble-one img, .container-bubble-two img {
-  width: 80vw;
+.logotype-small {
+  width: 35vw;
+}
+
+.container-bubble-one img,
+.container-bubble-two img,
+.container-score img,
+.container-high-score img {
+  width: 100%;
+}
+
+.arrow {
+  width: 50%;
 }
