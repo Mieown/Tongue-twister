@@ -58,13 +58,17 @@ footer {
 .game-description {
   padding: 1.6rem 0rem;
   font-size: 0.65rem;
-  /* text-align: justify; */
   line-height: 1.4rem;
 }
 
 /* Page 2 - Gamepage*/
+header {
+  padding-top: 1.3rem;
+  padding-left: 1.3rem;
+}
+
 .game-page {
-  padding: 1.3rem;
+  padding: 0rem 1.3rem 1.3rem 1.3rem;
 }
 
 .logotype-small {
@@ -94,11 +98,14 @@ footer {
 
 .container-score {
   margin-top: -4rem;
-  display: none;
+  /* display: none; */
 }
 
 .arrow {
   width: 50%;
+  transform: rotate(-70deg);
+  margin-top: -1rem;
+  margin-left: 1rem;
 }
 
 button {
@@ -113,6 +120,21 @@ button {
   background-color: var(--red);
   width: 8.4rem;
   text-transform: uppercase;
+  outline: none;
+}
+
+button:hover {
+  position: relative;
+  box-shadow: -2px 5px black;
+  top: -5px;
+  right: -2px;
+}
+
+button:active {
+  position: relative;
+  box-shadow: 0px 0px;
+  top: 0px;
+  right: 0px;
 }
 
 .button-container {
@@ -132,8 +154,8 @@ button {
   top: 0rem;
   left: 0rem;
   transform: rotate(-2.53deg);
-  padding: 2.3rem;
-  padding-right: 2.5rem;
+  padding: 2.3em;
+  padding-right: 2.5em;
 }
 
 .record-btn {
@@ -164,4 +186,22 @@ button {
   left: 0rem;
   transform: rotate(-2.1deg);
   padding: 2.1rem;
+}
+
+@media only screen and (min-width: 500px) {
+  .tongue-twister,
+  .speech-output {
+    font-size: 1.2rem;
+    width: 80%;
+  }
+
+  .container-bubble-one img,
+  .container-bubble-two img,
+  .container-high-score img {
+    width: 80%;
+  }
+
+  .container-score img {
+    width: 65%;
+  }
 }
