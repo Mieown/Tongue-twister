@@ -78,11 +78,18 @@ footer {
   width: 100%;
 }
 
-.container-bubble-one {
+.container-bubble-one,
+.container-bubble-two,
+.container-high-score,
+.container-score {
   position: relative;
 }
 
 .container-bubble-two {
+  margin-top: -3rem;
+}
+
+.container-score {
   margin-top: -3rem;
 }
 
@@ -122,10 +129,36 @@ button {
   left: 0rem;
   transform: rotate(-2.53deg);
   padding: 2.3rem;
+  padding-right: 2.5rem;
 }
 
 .record-btn {
   float: right;
   margin: 0rem 1.3rem -0.9rem 0rem;
   transform: rotate(2.29deg);
+}
+
+.speech-output {
+  position: absolute;
+  top: 2rem;
+  left: 0rem;
+  transform: rotate(2.29deg);
+  padding: 1.8rem;
+  padding-right: 2.5rem;
+}
+
+.score {
+  position: absolute;
+  top: 2.3rem;
+  left: 2rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.highscore {
+  position: absolute;
+  top: 8.3rem;
+  left: 0rem;
+  transform: rotate(-2.1deg);
+  padding: 2.1rem;
 }
