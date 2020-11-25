@@ -177,7 +177,7 @@ button:active {
   position: absolute;
   top: 3.4rem;
   left: 2.8rem;
-  padding: 0.76rem;
+  padding: 0.76em;
 }
 
 .highscore {
@@ -185,23 +185,89 @@ button:active {
   top: 8.3rem;
   left: 0rem;
   transform: rotate(-2.1deg);
-  padding: 2.1rem;
+  padding: 2.1em;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 490px) and (max-width: 749px){
+
+  .game-page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .button-container {
+    margin: auto;
+  }
+
   .tongue-twister,
-  .speech-output {
+  .speech-output,
+  .score,
+  .highscore {
     font-size: 1.2rem;
-    width: 80%;
   }
 
-  .container-bubble-one img,
-  .container-bubble-two img,
-  .container-high-score img {
+  .container-bubble-one,
+  .container-bubble-two,
+  .container-high-score {
+    /* background-color: aquamarine; */
     width: 80%;
+    margin: auto;
   }
 
-  .container-score img {
+  .container-bubble-two {
+    margin-top: -3.5rem;
+  }
+
+  .container-score {
     width: 65%;
   }
 }
+
+@media only screen and (min-width: 750px) and (max-width: 999px) {
+  .game-page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .button-container {
+    margin: auto;
+  }
+
+  .tongue-twister,
+  .speech-output,
+  .highscore {
+    font-size: 2rem;
+  }
+
+  .container-bubble-one,
+  .container-bubble-two,
+  .container-high-score {
+    /* background-color: aquamarine; */
+    width: 80%;
+    margin: auto;
+  }
+
+  .container-bubble-two {
+    margin-top: -3.5rem;
+  }
+
+  .container-score {
+    width: 65%;
+  }
+
+  .score {
+    top: 3.3em;
+    left: 2.7em;
+    font-size: 3vw;
+
+  }
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+}
+
+
