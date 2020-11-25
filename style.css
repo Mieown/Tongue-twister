@@ -68,14 +68,17 @@ footer {
 }
 
 .logotype-small {
-  width: 35vw;
+  width: 33vw;
 }
 
 .container-bubble-one img,
 .container-bubble-two img,
-.container-score img,
 .container-high-score img {
   width: 100%;
+}
+
+.container-score img {
+  width: 80%;
 }
 
 .container-bubble-one,
@@ -86,11 +89,12 @@ footer {
 }
 
 .container-bubble-two {
-  margin-top: -3rem;
+  margin-top: -3.5rem;
 }
 
 .container-score {
-  margin-top: -3rem;
+  margin-top: -4rem;
+  display: none;
 }
 
 .arrow {
@@ -117,10 +121,10 @@ button {
 }
 
 .button-container button:first-child {
-  margin: 1rem 0.6rem -0.9rem 0.3rem;
+  margin: 0.9rem 0.6rem -0.9rem 0.3rem;
 }
 .button-container button:last-child {
-  margin: 1rem 3.2rem -0.9rem 0;
+  margin: 0.9rem 3.2rem -0.9rem 0;
 }
 
 .tongue-twister {
@@ -134,7 +138,7 @@ button {
 
 .record-btn {
   float: right;
-  margin: 0rem 1.3rem -0.9rem 0rem;
+  margin: 0rem 1.3rem -1.05rem 0rem;
   transform: rotate(2.29deg);
 }
 
@@ -149,10 +153,9 @@ button {
 
 .score {
   position: absolute;
-  top: 2.3rem;
-  left: 2rem;
-  padding: 0.5rem;
-  width: 100%;
+  top: 3.4rem;
+  left: 2.8rem;
+  padding: 0.76rem;
 }
 
 .highscore {
