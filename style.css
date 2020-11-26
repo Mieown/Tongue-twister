@@ -97,32 +97,32 @@ header {
 }
 
 .container-bubble-two {
-  margin-top: -3.5rem;
+  margin-top: -3.4em;
 }
 
 .container-score {
-  margin-top: -4rem;
-  /* display: none; */
+  margin-top: -3.8em;
+  display: none;
 }
 
 .arrow {
   width: 50%;
   transform: rotate(-70deg);
-  margin-top: -1rem;
-  margin-left: 1rem;
+  margin-top: -1em;
+  margin-left: 1em;
 }
 
 button {
   border: 3px solid black;
   border-radius: 5px;
-  padding: 0.6em;
+  padding: 0.7em;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   color: var(--yellow);
-  font-size: 3vw;
+  font-size: 3.5vw;
   font-weight: 700;
   background-color: var(--red);
-  width: 10em;
+  width: 9.8em;
   text-transform: uppercase;
   outline: none;
 }
@@ -147,10 +147,10 @@ button:active {
 }
 
 .button-container button:first-child {
-  margin: 1.3em 0.74em -1.3em 0.5em;
+  margin: 1.3em 0.74em -1.1em 0.5em;
 }
 .button-container button:last-child {
-  margin: 1.3em 3.6rem -1.3em 0;
+  margin: 1.3em 3.6rem -1.1em 0;
 }
 
 .tongue-twister,
@@ -171,7 +171,7 @@ button:active {
 
 .record-btn {
   float: right;
-  margin: 0em 1.9em -1.4em 0;
+  margin: 0em 1.9em -1.2em 0;
   transform: rotate(2.29deg);
 }
 
@@ -193,8 +193,8 @@ button:active {
 
 .highscore {
   position: absolute;
-  top: 8.3rem;
-  left: 0rem;
+  top: 8.3em;
+  left: 0em;
   transform: rotate(-2.1deg);
   padding: 2.1em;
 }
