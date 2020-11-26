@@ -67,6 +67,10 @@ header {
   padding-left: 1.3rem;
 }
 
+.gray-text {
+  color: gray;
+}
+
 .game-page {
   padding: 0rem 1.3rem 1.3rem 1.3rem;
 }
@@ -111,14 +115,14 @@ header {
 button {
   border: 3px solid black;
   border-radius: 5px;
-  padding: 0.6rem;
+  padding: 0.6em;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   color: var(--yellow);
-  font-size: 0.9rem;
+  font-size: 3vw;
   font-weight: 700;
   background-color: var(--red);
-  width: 8.4rem;
+  width: 10em;
   text-transform: uppercase;
   outline: none;
 }
@@ -143,10 +147,10 @@ button:active {
 }
 
 .button-container button:first-child {
-  margin: 0.9rem 0.6rem -0.9rem 0.3rem;
+  margin: 1.3em 0.74em -1.3em 0.5em;
 }
 .button-container button:last-child {
-  margin: 0.9rem 3.2rem -0.9rem 0;
+  margin: 1.3em 3.6rem -1.3em 0;
 }
 
 .tongue-twister,
@@ -167,7 +171,7 @@ button:active {
 
 .record-btn {
   float: right;
-  margin: 0rem 1.3rem -1.05rem 0rem;
+  margin: 0em 1.9em -1.4em 0;
   transform: rotate(2.29deg);
 }
 
@@ -182,9 +186,9 @@ button:active {
 
 .score {
   position: absolute;
-  top: 3.4rem;
-  left: 2.8rem;
-  padding: 0.76em;
+  top: 3.6em;
+  left: 2.8em;
+  padding: 1em;
 }
 
 .highscore {
@@ -222,7 +226,7 @@ button:active {
   }
 
   .container-bubble-two {
-    margin-top: -3.5rem;
+    margin-top: -2.5em;
   }
 
   .container-score {
