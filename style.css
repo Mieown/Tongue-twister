@@ -220,30 +220,25 @@ button:active {
     margin: auto;
     width: 85%;
     margin-left: -1em;
-    /* background-color: blue; */
   }
 
   button {
-    font-size: 1.8vh;
+    font-size: 2.2vw;
   }
 
   .tongue-twister,
   .speech-output,
   .highscore,
   .score {
-    font-size: 2vh;
+    font-size: 3.5vw;
   }
 
-  /* .container-bubble-one,
-  .container-bubble-two,
-  .container-high-score {
-    width: 80%;
-    margin: auto;
+  .score {
+    top: 2.9em;
+    left: 2.6em;
+    padding: 0.7em;
+    padding-left: 0.5em;
   }
-
-  .container-bubble-two {
-    margin-top: -3.5rem;
-  } */
 }
 
 @media only screen and (min-width: 1000px) {
@@ -252,5 +247,67 @@ button:active {
     background-color: none;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  .game-page {
+    height: 96vh;
+  }
+
+  .logotype-small {
+    width: 12vw;
+  }
+
+  .row-one {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .container-bubble-two,
+  .container-btn-bubble,
+  .container-high-score,
+  .container-score {
+    width: 33%;
+  }
+
+  .container-btn-bubble {
+    margin-top: -4em;
+  }
+
+  .container-bubble-two {
+    margin-top: 2em;
+  }
+
+  .row-two {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container-high-score {
+    order: -1;
+    margin-top: -2em;
+  }
+
+  .arrow {
+    height: 130px;
+    width: 150px;
+  }
+
+  .tongue-twister,
+  .speech-output,
+  .highscore,
+  .score {
+    font-size: 1.5vw;
+  }
+
+  button {
+    font-size: 1.3vw;
+  }
+
+  .score {
+    top: 2.9em;
+    left: 2.6em;
+    padding: 1.1em;
+    padding-left: 0.7em;
   }
 }

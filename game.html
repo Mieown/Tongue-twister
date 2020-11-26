@@ -11,7 +11,7 @@
     />
   </head>
 
-  <body>
+  <body class="body-game">
     <header>
       <a href="index.html"
         ><img
@@ -22,47 +22,61 @@
     </header>
     <main>
       <div class="game-page">
-        <div class="button-container">
-          <button class="get-twister-btn">New Twister</button>
-          <button class="get-quote-btn">New Quote</button>
-        </div>
-        <div class="container-bubble-one">
-          <img src="Images/bubble left.png" alt="picture of a speech bubble" />
-          <div class="tongue-twister gray-text">
-            <p>
-              Click one of the buttons above to choose a tricky tongue twister, or a nice qoute to cite!
-            </p>
+        <div class="row-one">
+          <div class="container-btn-bubble">
+            <div class="button-container">
+              <button class="get-twister-btn">New Twister</button>
+              <button class="get-quote-btn">New Quote</button>
+            </div>
+            <div class="container-bubble-one">
+              <img
+                src="Images/bubble left.png"
+                alt="picture of a speech bubble"
+              />
+              <div class="tongue-twister gray-text">
+                <p>
+                  Click one of the buttons above to choose a tricky tongue
+                  twister, or a nice qoute to cite!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-bubble-two">
+            <button class="record-btn">Start!</button>
+            <img
+              src="Images/bubble right.png"
+              alt="picture of a speech bubble"
+            />
+            <div class="speech-output gray-text">
+              <p>
+                Click start when you're ready to speak! And just shut up when
+                you're done.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div class="container-bubble-two">
-          <button class="record-btn">Start!</button>
-          <img src="Images/bubble right.png" alt="picture of a speech bubble" />
-          <div class="speech-output gray-text">
-            <p>
-              Click start when you're ready to speak! And just shut up when you're done.
-            </p>
+        <div class="row-two">
+          <div class="container-score">
+            <img src="Images/score.png" alt="Score board" />
+            <div class="score">
+              <p>YEESSS! You did it!<br />You got 2 points!</p>
+            </div>
           </div>
-        </div>
 
-        <div class="container-score">
-          <img src="Images/score.png" alt="Score board" />
-          <div class="score">
-            <p>YEESSS! You did it!<br />You got 2 points!</p>
-          </div>
-        </div>
+          <img class="arrow" src="Images/arrow mobile.png" alt="arrows" />
 
-        <img class="arrow" src="Images/arrow mobile.png" alt="arrows" />
-
-        <div class="container-high-score">
-          <img src="Images/highscore.png" />
-          <div class="highscore">
-            <p>
-              1. Linnéa, 10p <br />
-              2. Albus Woolfrick Dumbledore 9.9p 3. Malin, 9.8p<br />
-              4. Elin, 9.7p <br />
-              5. Reda, 2p
-            </p>
+          <div class="container-high-score">
+            <img src="Images/highscore.png" />
+            <div class="highscore">
+              <p>
+                1. Linnéa, 10p <br />
+                2. Albus Woolfrick Dumbledore 9.9p 3. Malin, 9.8p<br />
+                4. Elin, 9.7p <br />
+                5. Reda, 2p
+              </p>
+            </div>
           </div>
         </div>
       </div>
