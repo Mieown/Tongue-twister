@@ -149,6 +149,13 @@ button:active {
   margin: 0.9rem 3.2rem -0.9rem 0;
 }
 
+.tongue-twister,
+.speech-output,
+.score,
+.highscore {
+  font-size: 4vw;
+}
+
 .tongue-twister {
   position: absolute;
   top: 0rem;
@@ -169,8 +176,8 @@ button:active {
   top: 2rem;
   left: 0rem;
   transform: rotate(2.29deg);
-  padding: 1.8rem;
-  padding-right: 2.5rem;
+  padding: 1.8em;
+  padding-right: 2.5em;
 }
 
 .score {
@@ -188,8 +195,7 @@ button:active {
   padding: 2.1em;
 }
 
-@media only screen and (min-width: 490px) and (max-width: 749px){
-
+@media only screen and (min-width: 490px) and (max-width: 749px) {
   .game-page {
     display: flex;
     justify-content: center;
@@ -261,13 +267,8 @@ button:active {
     top: 3.3em;
     left: 2.7em;
     font-size: 3vw;
-
   }
 }
 
-
 @media only screen and (min-width: 1000px) {
-
 }
-
-
