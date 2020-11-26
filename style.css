@@ -23,17 +23,17 @@ footer {
   display: flex;
   justify-content: center;
   text-align: center;
-  height: 5vh;
+  /* height: 5vh; */
   background-color: white;
-  padding: 0.5rem;
-  font-size: 0.8rem;
+  padding: 1em;
+  font-size: 0.8em;
 }
 
 .heart {
-  width: 1.8rem;
+  width: 1.8em;
   margin-top: -3px;
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
 }
 
 /*Startpage*/
@@ -43,8 +43,8 @@ footer {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 95vh;
-  padding: 1.8rem;
+  height: 100vh;
+  padding: 1.8em;
   max-width: 400px;
   margin: auto;
 }
@@ -54,19 +54,19 @@ footer {
 }
 
 .mouth {
-  width: 12rem;
+  width: 12em;
 }
 
 .game-description {
-  padding: 1.6rem 0rem;
-  font-size: 0.65rem;
-  line-height: 1.4rem;
+  padding: 1.6em 0em;
+  font-size: 0.65em;
+  line-height: 2em;
 }
 
 /* Page 2 - Gamepage*/
 header {
-  padding-top: 1.3rem;
-  padding-left: 1.3rem;
+  padding-top: 1.3em;
+  padding-left: 1.3em;
 }
 
 .gray-text {
@@ -74,7 +74,7 @@ header {
 }
 
 .game-page {
-  padding: 0rem 1.3rem 1.3rem 1.3rem;
+  padding: 0em 1.3em 1.3em 1.3em;
 }
 
 .logotype-small {
@@ -150,7 +150,7 @@ button:active {
   margin: 1.3em 0.74em -1.1em 0.5em;
 }
 .button-container button:last-child {
-  margin: 1.3em 3.6rem -1.1em 0;
+  margin: 1.3em 3.6em -1.1em 0;
 }
 
 .tongue-twister,
@@ -162,8 +162,8 @@ button:active {
 
 .tongue-twister {
   position: absolute;
-  top: 0rem;
-  left: 0rem;
+  top: 0em;
+  left: 0em;
   transform: rotate(-2.53deg);
   padding: 2.3em;
   padding-right: 2.5em;
@@ -177,8 +177,8 @@ button:active {
 
 .speech-output {
   position: absolute;
-  top: 2rem;
-  left: 0rem;
+  top: 2em;
+  left: 0em;
   transform: rotate(2.29deg);
   padding: 1.8em;
   padding-right: 2.5em;
@@ -206,79 +206,44 @@ button:active {
   padding: 2.1em;
 }
 
-@media only screen and (min-width: 490px) and (max-width: 749px) {
-  .game-page {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .button-container {
-    margin: auto;
-  }
-
-  .tongue-twister,
-  .speech-output,
-  .score,
-  .highscore {
-    font-size: 1.2rem;
-  }
-
-  .container-bubble-one,
-  .container-bubble-two,
-  .container-high-score {
-    /* background-color: aquamarine; */
-    width: 80%;
-    margin: auto;
-  }
-
-  .container-bubble-two {
-    margin-top: -2.5em;
-  }
-
-  .container-score {
-    width: 65%;
-  }
-}
-
 @media only screen and (min-width: 750px) and (max-width: 999px) {
+  .logotype-small {
+    width: 20vw;
+  }
+
   .game-page {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    width: 70%;
+    margin: auto;
   }
 
   .button-container {
     margin: auto;
+    width: 85%;
+    margin-left: -1em;
+    /* background-color: blue; */
+  }
+
+  button {
+    font-size: 1.8vh;
   }
 
   .tongue-twister,
   .speech-output,
-  .highscore {
-    font-size: 2rem;
+  .highscore,
+  .score {
+    font-size: 2vh;
   }
 
-  .container-bubble-one,
+  /* .container-bubble-one,
   .container-bubble-two,
   .container-high-score {
-    /* background-color: aquamarine; */
     width: 80%;
     margin: auto;
   }
 
   .container-bubble-two {
     margin-top: -3.5rem;
-  }
-
-  .container-score {
-    width: 65%;
-  }
-
-  .score {
-    top: 3.3em;
-    left: 2.7em;
-    font-size: 3vw;
-  }
+  } */
 }
 
 @media only screen and (min-width: 1000px) {
