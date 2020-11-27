@@ -1,6 +1,7 @@
 //Get information from HTML
 const startRecordingBtn = document.querySelector(".record-btn");
 const getNewTwisterBtn = document.querySelector(".get-twister-btn");
+const getQuotesBtn = document.querySelector(".get-quote-btn");
 
 const tongueTwisterText = document.querySelector(".tongue-twister");
 const speechOutput = document.querySelector(".speech-output");
@@ -12,6 +13,8 @@ startRecordingBtn.addEventListener("click", () => {
 });
 
 getNewTwisterBtn.addEventListener("click", getTongueTwister);
+getQuotesBtn.addEventListener("click", getQuote);
+
 
 //Set the speechrecognition
 const SpeechRecognition =
@@ -43,8 +46,12 @@ recognition.onresult = function (event) {
   speechOutput.textContent = transcript;
   let twisterText = tongueTwisterText.textContent.toLowerCase();
   const speechText = speechOutput.textContent.toLowerCase();
+  const characters = /[.,;´?!]/g;
+  let plainTwisterText = twisterText.replace(characters,"");
   if (twisterText == speechText) {
     score.innerText = "YEYYY you did it correct!!";
+  } else if (plainTwisterText == speechText) {
+    score.innerText = "YASSSS,,,,,,,, you did it correct!!";
   } else {
     score.innerText = "Nooo! You failed!";
   }
@@ -58,3 +65,12 @@ function getTongueTwister() {
   speechOutput.textContent = "";
   score.innerText = "";
 }
+
+//Get random Quotes from API
+function getQuote() {
+  fetch("https://api.quotable.io/random?maxLength=60")
+  .then(response => response.json())
+  .then(data => tongueTwisterText.innerText = data.content)
+  };
+
+
