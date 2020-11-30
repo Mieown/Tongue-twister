@@ -6,13 +6,16 @@ const getQuotesBtn = document.querySelector(".get-quote-btn");
 const tongueTwisterText = document.querySelector(".tongue-twister");
 const speechOutput = document.querySelector(".speech-output");
 const score = document.querySelector(".score");
+const containerScore = document.querySelector(".container-score");
 
 //Event listner
 startRecordingBtn.addEventListener("click", () => {
   recognition.start();
 });
 
+getNewTwisterBtn.addEventListener("touchstart", getTongueTwister);
 getNewTwisterBtn.addEventListener("click", getTongueTwister);
+getQuotesBtn.addEventListener("touchstart", getQuote);
 getQuotesBtn.addEventListener("click", getQuote);
 
 
@@ -48,6 +51,7 @@ recognition.onresult = function (event) {
   const speechText = speechOutput.textContent.toLowerCase();
   const characters = /[.,;´?!]/g;
   let plainTwisterText = twisterText.replace(characters,"");
+  containerScore.classList.remove("hidden");
   if (twisterText == speechText) {
     score.innerText = "YEYYY you did it correct!!";
   } else if (plainTwisterText == speechText) {
@@ -62,14 +66,22 @@ function getTongueTwister() {
   const randomTwister =
     tongueTwisterArray[Math.floor(Math.random() * tongueTwisterArray.length)];
   tongueTwisterText.textContent = randomTwister;
+  resetText();
+}
+
+function resetText () {
   speechOutput.textContent = "";
   score.innerText = "";
+  speechOutput.style.color = "black";
+  tongueTwisterText.style.color = "black";
+  containerScore.classList.add("hidden");
 }
 
 //Get random Quotes from API
 function getQuote() {
   fetch("https://api.quotable.io/random?maxLength=60")
   .then(response => response.json())
+  .then(resetText())
   .then(data => tongueTwisterText.innerText = data.content)
   };
 
