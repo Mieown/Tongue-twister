@@ -13,10 +13,15 @@ startRecordingBtn.addEventListener("click", () => {
   recognition.start();
 });
 
+startRecordingBtn.addEventListener("touchstart", () => {
+  recognition.start();
+});
+
 getNewTwisterBtn.addEventListener("touchstart", getTongueTwister);
 getNewTwisterBtn.addEventListener("click", getTongueTwister);
 getQuotesBtn.addEventListener("touchstart", getQuote);
 getQuotesBtn.addEventListener("click", getQuote);
+
 
 
 //Set the speechrecognition
@@ -83,6 +88,7 @@ function getQuote() {
   .then(response => response.json())
   .then(resetText())
   .then(data => tongueTwisterText.innerText = data.content)
+  .catch(error => tongueTwisterText.textContent = "ERROR ERROR ERROR Try again")
   };
 
 

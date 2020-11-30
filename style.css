@@ -125,6 +125,7 @@ button {
   text-transform: uppercase;
   outline: none;
   box-shadow: -2px 5px black;
+  cursor: pointer;
 }
 
 button:active {
