@@ -9,20 +9,19 @@ const score = document.querySelector(".score");
 const containerScore = document.querySelector(".container-score");
 
 //Event listner
-startRecordingBtn.addEventListener("click", () => {
-  recognition.start();
-});
-
-startRecordingBtn.addEventListener("touchstart", () => {
-  recognition.start();
-});
-
-getNewTwisterBtn.addEventListener("touchstart", getTongueTwister);
-getNewTwisterBtn.addEventListener("click", getTongueTwister);
-getQuotesBtn.addEventListener("touchstart", getQuote);
-getQuotesBtn.addEventListener("click", getQuote);
-
-
+if ('ontouchstart' in window) {
+  getNewTwisterBtn.addEventListener("touchstart", getTongueTwister);
+  getQuotesBtn.addEventListener("touchstart", getQuote);
+  startRecordingBtn.addEventListener("touchstart", () => {
+    recognition.start();
+  });
+} else {
+  getNewTwisterBtn.addEventListener("click", getTongueTwister);
+  getQuotesBtn.addEventListener("click", getQuote);
+  startRecordingBtn.addEventListener("click", () => {
+    recognition.start();
+  });
+}
 
 //Set the speechrecognition
 const SpeechRecognition =
