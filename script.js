@@ -64,10 +64,17 @@ recognition.onresult = function (event) {
   console.log(event);
 };
 
-const winnerSound =
-  winnerSounds[Math.floor(Math.random() * winnerSounds.length)];
+function getLoserSound() {
+  const loserSound =
+    loserSounds[Math.floor(Math.random() * loserSounds.length)];
+  loserSound.play();
+}
 
-const loserSound = loserSounds[Math.floor(Math.random() * loserSounds.length)];
+function getWinnerSound() {
+  const winnerSound =
+    winnerSounds[Math.floor(Math.random() * winnerSounds.length)];
+  winnerSound.play();
+}
 
 recognition.onresult = function (event) {
   const current = event.resultIndex;
@@ -81,13 +88,13 @@ recognition.onresult = function (event) {
   containerScore.style.animation = "bam 0.5s ease-in-out";
   if (twisterText == speechText) {
     score.innerText = "YEYYY you did it correct!!";
-    winnerSound.play();
+    getWinnerSound();
   } else if (plainTwisterText == speechText) {
     score.innerHTML = "YASSSS,,,,,,,, <br>you did it correct!!";
-    winnerSound.play();
+    getWinnerSound();
   } else {
     score.innerText = "Nooo! You failed!";
-    loserSound.play();
+    getLoserSound();
   }
 };
 
