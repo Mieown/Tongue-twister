@@ -106,6 +106,18 @@ header {
   margin-top: -3.8em;
 }
 
+@keyframes bam {
+  from {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
 .container-high-score {
   margin-top: 0.7em;
   margin-bottom: 0.7em;
@@ -193,6 +205,21 @@ button:active {
   width: 50%;
   margin-top: -1em;
   margin-left: 1.4em;
+  animation: point 0.5s infinite alternate;
+}
+
+@keyframes point {
+  from {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(-5%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
 }
 
 .highscore {
@@ -308,9 +335,22 @@ button:active {
   .arrow {
     height: 96px;
     width: 190px;
-    transform: rotate(110deg);
     margin-top: 3em;
     margin-left: -2em;
+  }
+
+  @keyframes point {
+    from {
+      transform: translateX(0%) rotate(110deg);
+    }
+
+    50% {
+      transform: translateX(5%) rotate(110deg);
+    }
+
+    to {
+      transform: translateX(0%) rotate(110deg);
+    }
   }
 
   .tongue-twister,
