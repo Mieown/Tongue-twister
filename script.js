@@ -67,6 +67,8 @@ recognition.onresult = function (event) {
 const winnerSound =
   winnerSounds[Math.floor(Math.random() * winnerSounds.length)];
 
+const loserSound = loserSounds[Math.floor(Math.random() * loserSounds.length)];
+
 recognition.onresult = function (event) {
   const current = event.resultIndex;
   const transcript = event.results[current][0].transcript;
@@ -79,10 +81,13 @@ recognition.onresult = function (event) {
   containerScore.style.animation = "bam 0.5s ease-in-out";
   if (twisterText == speechText) {
     score.innerText = "YEYYY you did it correct!!";
+    winnerSound.play();
   } else if (plainTwisterText == speechText) {
     score.innerHTML = "YASSSS,,,,,,,, <br>you did it correct!!";
+    winnerSound.play();
   } else {
     score.innerText = "Nooo! You failed!";
+    loserSound.play();
   }
 };
 

@@ -138,6 +138,7 @@ button {
   outline: none;
   box-shadow: -2px 5px black;
   cursor: pointer;
+  z-index: 10;
 }
 
 button:active {
