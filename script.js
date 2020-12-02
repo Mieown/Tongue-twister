@@ -18,13 +18,12 @@ const winner5 = new Audio("sounds/winner/yesyesyes.wav");
 const loser1 = new Audio("sounds/loser/boo.wav");
 const loser2 = new Audio("sounds/loser/loser.wav");
 const loser3 = new Audio("sounds/loser/scream.wav");
-const loser4 = new Audio("sounds/loser/triste.wav");
-const loser5 = new Audio("sounds/loser/zombie.wav");
+const loser4 = new Audio("sounds/loser/zombie.wav");
 
 //Arrays
 const winnerSounds = [winner1, winner2, winner3, winner4, winner5];
 
-const loserSounds = [loser1, loser2, loser3, loser4, loser5];
+const loserSounds = [loser1, loser2, loser3, loser4];
 
 const tongueTwisterArray = [
   "How can a clam cram in a clean cream can I scream",
@@ -107,6 +106,15 @@ recognition.onresult = function (event) {
   const speechText = speechOutput.textContent.toLowerCase();
   const characters = /[.,;´?!]/g;
   let plainTwisterText = twisterText.replace(characters, "");
+
+  //Count score
+  const checkWords = speechText.split(" ");
+  const facitWords = twisterText.split(" ");
+    for (i=0; i<checkWords.length; i++) {
+     var weHaveChecked = facitWords.includes(checkWords);
+      console.log(weHaveChecked);
+    }
+  
 
   //Add score and animate
   containerScore.classList.remove("hidden");
