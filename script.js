@@ -42,7 +42,7 @@ const tongueTwisterArray = [
   "Can you can a can as a canner can can a can",
   "I wish to wash my Irish wristwatch",
   "A big black bear sat on a big black rug",
-  "Tom threw Tim 3 thumb tacks",
+  "Tom threw Tim three thumb tacks",
   "He threw three free throws",
   "Four fine fresh fish for you",
   "We surely shall see the sun shine soon",
@@ -109,11 +109,18 @@ recognition.onresult = function (event) {
 
   //Count score
   const checkWords = speechText.split(" ");
-  const facitWords = twisterText.split(" ");
-    for (i=0; i<checkWords.length; i++) {
-     var weHaveChecked = facitWords.includes(checkWords);
+  const facitWords = plainTwisterText.split(" ");
+  console.log(checkWords);
+  let weHaveChecked = [];   
+
+  for (i=0; i<checkWords.length; i++) {
+      weHaveChecked.push(plainTwisterText.includes(checkWords[i]));
       console.log(weHaveChecked);
-    }
+   }
+
+   let count = weHaveChecked.filter(Boolean).length;
+   let resultMessage = "You got "+ count +" out of " + facitWords.length+" words!";
+  
   
 
   //Add score and animate
@@ -121,13 +128,13 @@ recognition.onresult = function (event) {
   containerScore.style.animation = "bam 0.5s ease-in-out";
 
   if (twisterText == speechText) {
-    score.innerText = "YEYYY you did it correct!!";
+    score.innerHTML = "YEYYY you did it correct!!<br>"+ resultMessage;
     getWinnerSound();
   } else if (plainTwisterText == speechText) {
-    score.innerHTML = "YASSSS,,,,,,,, <br>you did it correct!!";
+    score.innerHTML = "YASSSS, you did it right!<br>"+ resultMessage;
     getWinnerSound();
   } else {
-    score.innerText = "Nooo! You failed!";
+    score.innerHTML = "Nooo! You failed!<br>"+ resultMessage;
     getLoserSound();
   }
 };
