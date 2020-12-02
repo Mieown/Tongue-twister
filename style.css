@@ -58,7 +58,7 @@ footer {
 }
 
 .game-description {
-  padding: 1.6em 0em;
+  padding: 2em 0em;
   font-size: 0.65em;
   line-height: 2em;
 }
@@ -96,6 +96,10 @@ header {
 .container-high-score,
 .container-score {
   position: relative;
+}
+
+.container-bubble-one {
+  pointer-events: none;
 }
 
 .container-bubble-two {
@@ -276,7 +280,7 @@ button:active {
   }
 
   #startpage {
-    max-width: 600px;
+    max-width: 540px;
   }
 
   main {

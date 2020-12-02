@@ -32,6 +32,26 @@ const tongueTwisterArray = [
   "I saw a kitten eating chicken in the kitchen",
   "If a dog chews shoes whose shoes does he choose",
   "I thought I thought of thinking of thanking you",
+  "Fred fed Ted bread and Ted fed Fred bread",
+  "Which wristwatches are Swiss wristwatches",
+  "I slit the sheet the sheet I slit and on the slitted sheet I sit",
+  "nine nice night nurses nursing nicely",
+  "Wayne went to wales to watch walruses",
+  "If you need a program to program a program how do you program that program",
+  "Which wristwatches are Swiss wristwatches",
+  "So this is the sushi chef",
+  "Can you can a can as a canner can can a can",
+  "I wish to wash my Irish wristwatch",
+  "A big black bear sat on a big black rug",
+  "Tom threw Tim 3 thumb tacks",
+  "He threw three free throws",
+  "Four fine fresh fish for you",
+  "We surely shall see the sun shine soon",
+  "She sells seashells by the seashore", 
+  "Happy hysterical Hyper Island students",
+  "A happy hippo hopped and hiccupped",
+  "Cooks cook cupcakes quickly",
+  "A snake sneaks to seek a snack",
 ];
 
 //Event listner -------------------------
@@ -77,15 +97,21 @@ function getWinnerSound() {
 }
 
 recognition.onresult = function (event) {
+  //Speech recognition, transcribe what we are saying
   const current = event.resultIndex;
   const transcript = event.results[current][0].transcript;
   speechOutput.textContent = transcript;
+
+  //Make case insensitive and remove special characters
   let twisterText = tongueTwisterText.textContent.toLowerCase();
   const speechText = speechOutput.textContent.toLowerCase();
   const characters = /[.,;´?!]/g;
   let plainTwisterText = twisterText.replace(characters, "");
+
+  //Add score and animate
   containerScore.classList.remove("hidden");
   containerScore.style.animation = "bam 0.5s ease-in-out";
+
   if (twisterText == speechText) {
     score.innerText = "YEYYY you did it correct!!";
     getWinnerSound();
