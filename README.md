@@ -6,11 +6,10 @@ With a web speech API we created a speech-to-text function that matches what you
 
 ### Demo
 https://mieown.github.io/Tongue-twister/
-
 The web speech function only works in chrome, keep that in mind. 
 
 ### Tools used
-Speech recognition
-Quotable API
-Javascript
-HTML/CSS
+Speech recognition  
+Quotable API  
+Javascript  
+HTML/CSS  
