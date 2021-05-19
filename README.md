@@ -10,7 +10,7 @@ The web speech function only works in chrome, keep that in mind.
 
 #### Team
 Malin Olofsson  
-Linnea Gistrand  
+Linnéa Gistrand  
 Elin Amrén
 
 #### Tools used
